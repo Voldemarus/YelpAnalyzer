@@ -83,8 +83,7 @@
 				[alert runModal];
 				return;
 			}
-			if([object isKindOfClass:[NSDictionary class]])
-			{
+			if([object isKindOfClass:[NSDictionary class]])	{
 				NSDictionary *results = object;
 				// Determine, which class we are processing now
 				NSString *currentClassName = [results objectForKey:@"type"];
