@@ -6,4 +6,22 @@
 
 #ifdef __OBJC__
 	#import <Cocoa/Cocoa.h>
+
+// Core Data Entities
+
+#import "Business.h"
+#import "Neighborhoods.h"
+#import "Compliment.h"
+#import "Categories.h"
+#import "Tip.h"
+#import "Elite.h"
+#import "ComplimentType.h"
+#import "Vote.h"
+#import "VoteType.h"
+#import "OpenHours.h"
+#import "CheckIn.h"
+#import "TempFriends.h"
+#import "User.h"
+#import "Attributes.h"
+
 #endif

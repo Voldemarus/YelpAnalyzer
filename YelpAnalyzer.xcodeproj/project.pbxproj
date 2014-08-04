@@ -19,6 +19,23 @@
 		1B655702198F7E4100D935EF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6556DE198F7E4000D935EF /* Cocoa.framework */; };
 		1B65570A198F7E4100D935EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B655708198F7E4100D935EF /* InfoPlist.strings */; };
 		1B65570C198F7E4100D935EF /* YelpAnalyzerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B65570B198F7E4100D935EF /* YelpAnalyzerTests.m */; };
+		1BB971AB198FB14200C91428 /* GMLJsonDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971AA198FB14200C91428 /* GMLJsonDao.m */; };
+		1BB971DA198FB63800C91428 /* VoteType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971D9198FB63800C91428 /* VoteType.m */; };
+		1BB971DD198FB63800C91428 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971DC198FB63800C91428 /* Review.m */; };
+		1BB971E0198FB63800C91428 /* OpenHours.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971DF198FB63800C91428 /* OpenHours.m */; };
+		1BB971E3198FB63800C91428 /* ReviewVote.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971E2198FB63800C91428 /* ReviewVote.m */; };
+		1BB971E6198FB63800C91428 /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971E5198FB63800C91428 /* Business.m */; };
+		1BB971E9198FB63800C91428 /* Compliment.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971E8198FB63800C91428 /* Compliment.m */; };
+		1BB971EC198FB63900C91428 /* Elite.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971EB198FB63900C91428 /* Elite.m */; };
+		1BB971EF198FB63900C91428 /* Tip.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971EE198FB63900C91428 /* Tip.m */; };
+		1BB971F2198FB63900C91428 /* TempFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971F1198FB63900C91428 /* TempFriends.m */; };
+		1BB971F5198FB63900C91428 /* Neighborhoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971F4198FB63900C91428 /* Neighborhoods.m */; };
+		1BB971F8198FB63900C91428 /* Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971F7198FB63900C91428 /* Attributes.m */; };
+		1BB971FB198FB63900C91428 /* CheckIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971FA198FB63900C91428 /* CheckIn.m */; };
+		1BB971FE198FB63900C91428 /* ComplimentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971FD198FB63900C91428 /* ComplimentType.m */; };
+		1BB97201198FB63900C91428 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB97200198FB63900C91428 /* User.m */; };
+		1BB97204198FB63900C91428 /* Categories.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB97203198FB63900C91428 /* Categories.m */; };
+		1BB97207198FB63900C91428 /* Vote.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB97206198FB63900C91428 /* Vote.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +69,40 @@
 		1B655707198F7E4100D935EF /* YelpAnalyzerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "YelpAnalyzerTests-Info.plist"; sourceTree = "<group>"; };
 		1B655709198F7E4100D935EF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1B65570B198F7E4100D935EF /* YelpAnalyzerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YelpAnalyzerTests.m; sourceTree = "<group>"; };
+		1BB971A9198FB14200C91428 /* GMLJsonDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLJsonDao.h; sourceTree = "<group>"; };
+		1BB971AA198FB14200C91428 /* GMLJsonDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLJsonDao.m; sourceTree = "<group>"; };
+		1BB971D8198FB63800C91428 /* VoteType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoteType.h; sourceTree = "<group>"; };
+		1BB971D9198FB63800C91428 /* VoteType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoteType.m; sourceTree = "<group>"; };
+		1BB971DB198FB63800C91428 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		1BB971DC198FB63800C91428 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
+		1BB971DE198FB63800C91428 /* OpenHours.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenHours.h; sourceTree = "<group>"; };
+		1BB971DF198FB63800C91428 /* OpenHours.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenHours.m; sourceTree = "<group>"; };
+		1BB971E1198FB63800C91428 /* ReviewVote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewVote.h; sourceTree = "<group>"; };
+		1BB971E2198FB63800C91428 /* ReviewVote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewVote.m; sourceTree = "<group>"; };
+		1BB971E4198FB63800C91428 /* Business.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Business.h; sourceTree = "<group>"; };
+		1BB971E5198FB63800C91428 /* Business.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Business.m; sourceTree = "<group>"; };
+		1BB971E7198FB63800C91428 /* Compliment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Compliment.h; sourceTree = "<group>"; };
+		1BB971E8198FB63800C91428 /* Compliment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Compliment.m; sourceTree = "<group>"; };
+		1BB971EA198FB63900C91428 /* Elite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Elite.h; sourceTree = "<group>"; };
+		1BB971EB198FB63900C91428 /* Elite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Elite.m; sourceTree = "<group>"; };
+		1BB971ED198FB63900C91428 /* Tip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tip.h; sourceTree = "<group>"; };
+		1BB971EE198FB63900C91428 /* Tip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tip.m; sourceTree = "<group>"; };
+		1BB971F0198FB63900C91428 /* TempFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempFriends.h; sourceTree = "<group>"; };
+		1BB971F1198FB63900C91428 /* TempFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempFriends.m; sourceTree = "<group>"; };
+		1BB971F3198FB63900C91428 /* Neighborhoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Neighborhoods.h; sourceTree = "<group>"; };
+		1BB971F4198FB63900C91428 /* Neighborhoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Neighborhoods.m; sourceTree = "<group>"; };
+		1BB971F6198FB63900C91428 /* Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attributes.h; sourceTree = "<group>"; };
+		1BB971F7198FB63900C91428 /* Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attributes.m; sourceTree = "<group>"; };
+		1BB971F9198FB63900C91428 /* CheckIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckIn.h; sourceTree = "<group>"; };
+		1BB971FA198FB63900C91428 /* CheckIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckIn.m; sourceTree = "<group>"; };
+		1BB971FC198FB63900C91428 /* ComplimentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplimentType.h; sourceTree = "<group>"; };
+		1BB971FD198FB63900C91428 /* ComplimentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplimentType.m; sourceTree = "<group>"; };
+		1BB971FF198FB63900C91428 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		1BB97200198FB63900C91428 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		1BB97202198FB63900C91428 /* Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categories.h; sourceTree = "<group>"; };
+		1BB97203198FB63900C91428 /* Categories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categories.m; sourceTree = "<group>"; };
+		1BB97205198FB63900C91428 /* Vote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vote.h; sourceTree = "<group>"; };
+		1BB97206198FB63900C91428 /* Vote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vote.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +168,14 @@
 		1B6556E4198F7E4000D935EF /* YelpAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
+				1BB971AC198FB1AC00C91428 /* DataModel */,
 				1B6556F0198F7E4000D935EF /* GMLAppDelegate.h */,
 				1B6556F1198F7E4000D935EF /* GMLAppDelegate.m */,
 				1B6556F3198F7E4100D935EF /* MainMenu.xib */,
 				1B6556F9198F7E4100D935EF /* Images.xcassets */,
-				1B6556F6198F7E4100D935EF /* YelpAnalyzer.xcdatamodeld */,
 				1B6556E5198F7E4000D935EF /* Supporting Files */,
+				1BB971A9198FB14200C91428 /* GMLJsonDao.h */,
+				1BB971AA198FB14200C91428 /* GMLJsonDao.m */,
 			);
 			path = YelpAnalyzer;
 			sourceTree = "<group>";
@@ -155,6 +208,54 @@
 				1B655708198F7E4100D935EF /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1BB971AC198FB1AC00C91428 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				1BB971D7198FB61200C91428 /* Entities */,
+				1B6556F6198F7E4100D935EF /* YelpAnalyzer.xcdatamodeld */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		1BB971D7198FB61200C91428 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1BB97205198FB63900C91428 /* Vote.h */,
+				1BB97206198FB63900C91428 /* Vote.m */,
+				1BB97202198FB63900C91428 /* Categories.h */,
+				1BB97203198FB63900C91428 /* Categories.m */,
+				1BB971FF198FB63900C91428 /* User.h */,
+				1BB97200198FB63900C91428 /* User.m */,
+				1BB971FC198FB63900C91428 /* ComplimentType.h */,
+				1BB971FD198FB63900C91428 /* ComplimentType.m */,
+				1BB971F9198FB63900C91428 /* CheckIn.h */,
+				1BB971FA198FB63900C91428 /* CheckIn.m */,
+				1BB971F6198FB63900C91428 /* Attributes.h */,
+				1BB971F7198FB63900C91428 /* Attributes.m */,
+				1BB971F3198FB63900C91428 /* Neighborhoods.h */,
+				1BB971F4198FB63900C91428 /* Neighborhoods.m */,
+				1BB971F0198FB63900C91428 /* TempFriends.h */,
+				1BB971F1198FB63900C91428 /* TempFriends.m */,
+				1BB971ED198FB63900C91428 /* Tip.h */,
+				1BB971EE198FB63900C91428 /* Tip.m */,
+				1BB971EA198FB63900C91428 /* Elite.h */,
+				1BB971EB198FB63900C91428 /* Elite.m */,
+				1BB971E7198FB63800C91428 /* Compliment.h */,
+				1BB971E8198FB63800C91428 /* Compliment.m */,
+				1BB971E4198FB63800C91428 /* Business.h */,
+				1BB971E5198FB63800C91428 /* Business.m */,
+				1BB971E1198FB63800C91428 /* ReviewVote.h */,
+				1BB971E2198FB63800C91428 /* ReviewVote.m */,
+				1BB971DE198FB63800C91428 /* OpenHours.h */,
+				1BB971DF198FB63800C91428 /* OpenHours.m */,
+				1BB971DB198FB63800C91428 /* Review.h */,
+				1BB971DC198FB63800C91428 /* Review.m */,
+				1BB971D8198FB63800C91428 /* VoteType.h */,
+				1BB971D9198FB63800C91428 /* VoteType.m */,
+			);
+			name = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,9 +357,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BB971F2198FB63900C91428 /* TempFriends.m in Sources */,
+				1BB971E6198FB63800C91428 /* Business.m in Sources */,
+				1BB97201198FB63900C91428 /* User.m in Sources */,
+				1BB971E0198FB63800C91428 /* OpenHours.m in Sources */,
+				1BB971EC198FB63900C91428 /* Elite.m in Sources */,
 				1B6556F8198F7E4100D935EF /* YelpAnalyzer.xcdatamodeld in Sources */,
+				1BB971AB198FB14200C91428 /* GMLJsonDao.m in Sources */,
+				1BB971DA198FB63800C91428 /* VoteType.m in Sources */,
 				1B6556EB198F7E4000D935EF /* main.m in Sources */,
+				1BB971FE198FB63900C91428 /* ComplimentType.m in Sources */,
+				1BB971F8198FB63900C91428 /* Attributes.m in Sources */,
+				1BB971FB198FB63900C91428 /* CheckIn.m in Sources */,
 				1B6556F2198F7E4000D935EF /* GMLAppDelegate.m in Sources */,
+				1BB971E9198FB63800C91428 /* Compliment.m in Sources */,
+				1BB971EF198FB63900C91428 /* Tip.m in Sources */,
+				1BB97207198FB63900C91428 /* Vote.m in Sources */,
+				1BB971DD198FB63800C91428 /* Review.m in Sources */,
+				1BB971E3198FB63800C91428 /* ReviewVote.m in Sources */,
+				1BB971F5198FB63900C91428 /* Neighborhoods.m in Sources */,
+				1BB97204198FB63900C91428 /* Categories.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +589,7 @@
 				1B655711198F7E4100D935EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B655712198F7E4100D935EF /* Build configuration list for PBXNativeTarget "YelpAnalyzerTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +598,7 @@
 				1B655714198F7E4100D935EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

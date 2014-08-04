@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Attributes" syncable="YES">
+    <entity name="Attributes" representedClassName="Attributes" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="businesses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Business" inverseName="attributes" inverseEntity="Business" syncable="YES"/>
     </entity>
-    <entity name="Business" syncable="YES">
+    <entity name="Business" representedClassName="Business" syncable="YES">
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="fullAddress" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
@@ -21,53 +21,67 @@
         <relationship name="checkIns" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CheckIn" inverseName="business" inverseEntity="CheckIn" syncable="YES"/>
         <relationship name="neighborhoods" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Neighborhoods" inverseName="businesses" inverseEntity="Neighborhoods" syncable="YES"/>
         <relationship name="openHours" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OpenHours" inverseName="businesses" inverseEntity="OpenHours" syncable="YES"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="business" inverseEntity="Review" syncable="YES"/>
         <relationship name="tips" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tip" inverseName="business" inverseEntity="Tip" syncable="YES"/>
     </entity>
-    <entity name="Categories" syncable="YES">
+    <entity name="Categories" representedClassName="Categories" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="businesses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Business" inverseName="categories" inverseEntity="Business" syncable="YES"/>
     </entity>
-    <entity name="CheckIn" syncable="YES">
+    <entity name="CheckIn" representedClassName="CheckIn" syncable="YES">
         <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="dayNum" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="hour" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="business" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="checkIns" inverseEntity="Business" syncable="YES"/>
     </entity>
-    <entity name="Compliment" syncable="YES">
+    <entity name="Compliment" representedClassName="Compliment" syncable="YES">
         <attribute name="count" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ComplimentType" inverseName="compliments" inverseEntity="ComplimentType" syncable="YES"/>
     </entity>
-    <entity name="ComplimentType" syncable="YES">
+    <entity name="ComplimentType" representedClassName="ComplimentType" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="compliments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Compliment" inverseName="type" inverseEntity="Compliment" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="compliments" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="Elite" syncable="YES">
+    <entity name="Elite" representedClassName="Elite" syncable="YES">
         <attribute name="year" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <relationship name="users" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="eliteYears" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="Neighborhoods" syncable="YES">
+    <entity name="Neighborhoods" representedClassName="Neighborhoods" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="businesses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Business" inverseName="neighborhoods" inverseEntity="Business" syncable="YES"/>
     </entity>
-    <entity name="OpenHours" syncable="YES">
+    <entity name="OpenHours" representedClassName="OpenHours" syncable="YES">
         <attribute name="close" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="open" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="businesses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Business" inverseName="openHours" inverseEntity="Business" syncable="YES"/>
     </entity>
-    <entity name="TempFriends" syncable="YES">
+    <entity name="Review" representedClassName="Review" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="stars" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="business" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="reviews" inverseEntity="Business" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="reviews" inverseEntity="User" syncable="YES"/>
+        <relationship name="votes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReviewVote" inverseName="review" inverseEntity="ReviewVote" syncable="YES"/>
+    </entity>
+    <entity name="ReviewVote" representedClassName="ReviewVote" syncable="YES">
+        <attribute name="count" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="review" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Review" inverseName="votes" inverseEntity="Review" syncable="YES"/>
+        <relationship name="voteType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VoteType" inverseName="reviewCounts" inverseEntity="VoteType" syncable="YES"/>
+    </entity>
+    <entity name="TempFriends" representedClassName="TempFriends" syncable="YES">
         <attribute name="friendId" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <relationship name="master" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="tmpFriends" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="Tip" syncable="YES">
+    <entity name="Tip" representedClassName="Tip" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="likes" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="business" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="tips" inverseEntity="Business" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="tips" inverseEntity="User" syncable="YES"/>
     </entity>
-    <entity name="User" syncable="YES">
+    <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="averageStars" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="fans" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
@@ -78,23 +92,25 @@
         <relationship name="eliteYears" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Elite" inverseName="users" inverseEntity="Elite" syncable="YES"/>
         <relationship name="followerForFriends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="friendsFollowers" inverseEntity="User" syncable="YES"/>
         <relationship name="friendsFollowers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="followerForFriends" inverseEntity="User" syncable="YES"/>
+        <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="user" inverseEntity="Review" syncable="YES"/>
         <relationship name="tips" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tip" inverseName="user" inverseEntity="Tip" syncable="YES"/>
         <relationship name="tmpFriends" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TempFriends" inverseName="master" inverseEntity="TempFriends" syncable="YES"/>
         <relationship name="votes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Vote" inverseName="user" inverseEntity="Vote" syncable="YES"/>
     </entity>
-    <entity name="Vote" syncable="YES">
+    <entity name="Vote" representedClassName="Vote" syncable="YES">
         <attribute name="count" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="votes" inverseEntity="User" syncable="YES"/>
         <relationship name="voteType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VoteType" inverseName="counts" inverseEntity="VoteType" syncable="YES"/>
     </entity>
-    <entity name="VoteType" syncable="YES">
+    <entity name="VoteType" representedClassName="VoteType" syncable="YES">
         <attribute name="grade" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
         <relationship name="counts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Vote" inverseName="voteType" inverseEntity="Vote" syncable="YES"/>
+        <relationship name="reviewCounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReviewVote" inverseName="voteType" inverseEntity="ReviewVote" syncable="YES"/>
     </entity>
     <elements>
         <element name="Attributes" positionX="-11" positionY="45" width="128" height="88"/>
-        <element name="Business" positionX="286" positionY="-49" width="128" height="283"/>
+        <element name="Business" positionX="286" positionY="-49" width="128" height="298"/>
         <element name="Categories" positionX="547" positionY="71" width="128" height="73"/>
         <element name="CheckIn" positionX="97" positionY="-49" width="128" height="103"/>
         <element name="Compliment" positionX="61" positionY="188" width="128" height="73"/>
@@ -103,9 +119,11 @@
         <element name="Neighborhoods" positionX="549" positionY="161" width="128" height="73"/>
         <element name="OpenHours" positionX="486" positionY="-45" width="128" height="103"/>
         <element name="TempFriends" positionX="-153" positionY="405" width="128" height="73"/>
-        <element name="User" positionX="61" positionY="261" width="128" height="238"/>
+        <element name="User" positionX="61" positionY="261" width="128" height="253"/>
         <element name="Vote" positionX="-117" positionY="522" width="128" height="88"/>
-        <element name="VoteType" positionX="232" positionY="567" width="128" height="88"/>
+        <element name="VoteType" positionX="232" positionY="567" width="128" height="103"/>
         <element name="Tip" positionX="394" positionY="278" width="128" height="118"/>
+        <element name="Review" positionX="99" positionY="297" width="128" height="133"/>
+        <element name="ReviewVote" positionX="108" positionY="306" width="128" height="88"/>
     </elements>
 </model>
