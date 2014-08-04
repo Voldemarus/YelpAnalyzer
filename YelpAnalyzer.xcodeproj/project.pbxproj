@@ -126,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B5A5C7C198FB6B700BA4646 /* JSON Parser */ = {
+			isa = PBXGroup;
+			children = (
+				1BB971A9198FB14200C91428 /* GMLJsonDao.h */,
+				1BB971AA198FB14200C91428 /* GMLJsonDao.m */,
+			);
+			name = "JSON Parser";
+			sourceTree = "<group>";
+		};
 		1B6556D2198F7E4000D935EF = {
 			isa = PBXGroup;
 			children = (
@@ -168,14 +177,13 @@
 		1B6556E4198F7E4000D935EF /* YelpAnalyzer */ = {
 			isa = PBXGroup;
 			children = (
+				1B5A5C7C198FB6B700BA4646 /* JSON Parser */,
 				1BB971AC198FB1AC00C91428 /* DataModel */,
 				1B6556F0198F7E4000D935EF /* GMLAppDelegate.h */,
 				1B6556F1198F7E4000D935EF /* GMLAppDelegate.m */,
 				1B6556F3198F7E4100D935EF /* MainMenu.xib */,
 				1B6556F9198F7E4100D935EF /* Images.xcassets */,
 				1B6556E5198F7E4000D935EF /* Supporting Files */,
-				1BB971A9198FB14200C91428 /* GMLJsonDao.h */,
-				1BB971AA198FB14200C91428 /* GMLJsonDao.m */,
 			);
 			path = YelpAnalyzer;
 			sourceTree = "<group>";

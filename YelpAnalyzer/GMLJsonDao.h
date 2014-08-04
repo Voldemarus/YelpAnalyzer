@@ -10,4 +10,6 @@
 
 @interface GMLJsonDao : NSObject
 
+- (void) parseSourceFiles;
+
 @end

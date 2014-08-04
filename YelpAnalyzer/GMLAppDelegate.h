@@ -7,8 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "GMLJsonDao.h"
 
-@interface GMLAppDelegate : NSObject <NSApplicationDelegate>
+@interface GMLAppDelegate : NSObject <NSApplicationDelegate> {
+	GMLJsonDao *jDao;
+}
 
 @property (assign) IBOutlet NSWindow *window;
 

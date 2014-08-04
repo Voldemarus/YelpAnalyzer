@@ -23,5 +23,6 @@
 #import "TempFriends.h"
 #import "User.h"
 #import "Attributes.h"
+#import "Review.h"
 
 #endif

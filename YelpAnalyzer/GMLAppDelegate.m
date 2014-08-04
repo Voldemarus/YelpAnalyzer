@@ -17,6 +17,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
 	// Insert code here to initialize your application
+	jDao = [[GMLJsonDao alloc] init];
+	
+	[jDao parseSourceFiles];
+	
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "geomatix.cz.YelpAnalyzer" in the user's Application Support directory.
@@ -81,9 +85,9 @@
         }
     }
     
-    NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"YelpAnalyzer.storedata"];
+    NSURL *url = [applicationFilesDirectory URLByAppendingPathComponent:@"YelpAnalyzer.sqlite"];
     NSPersistentStoreCoordinator *coordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
-    if (![coordinator addPersistentStoreWithType:NSXMLStoreType configuration:nil URL:url options:nil error:&error]) {
+    if (![coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:nil error:&error]) {
         [[NSApplication sharedApplication] presentError:error];
         return nil;
     }
