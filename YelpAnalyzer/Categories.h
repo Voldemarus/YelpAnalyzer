@@ -24,4 +24,6 @@
 - (void)addBusinesses:(NSSet *)values;
 - (void)removeBusinesses:(NSSet *)values;
 
++ (Categories *) getCategoryByName:(NSString *)catName inMoc:(NSManagedObjectContext *) moc;
+
 @end

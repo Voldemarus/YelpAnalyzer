@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B478428198FE8EA00BA0317 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1B478426198FE8EA00BA0317 /* README.md */; };
+		1B478429198FE8EA00BA0317 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 1B478427198FE8EA00BA0317 /* LICENSE */; };
+		1B47842C198FE9D200BA0317 /* Yelp_Dataset_Challenge_Terms_round_4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B47842A198FE9D200BA0317 /* Yelp_Dataset_Challenge_Terms_round_4.pdf */; };
+		1B47842D198FE9D200BA0317 /* Dataset_Challenge_Academic_Dataset_Agreement.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B47842B198FE9D200BA0317 /* Dataset_Challenge_Academic_Dataset_Agreement.pdf */; };
+		1B478430198FEDEE00BA0317 /* GMLDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B47842F198FEDEE00BA0317 /* GMLDAO.m */; };
 		1B6556DF198F7E4000D935EF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6556DE198F7E4000D935EF /* Cocoa.framework */; };
 		1B6556E9198F7E4000D935EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B6556E7198F7E4000D935EF /* InfoPlist.strings */; };
 		1B6556EB198F7E4000D935EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6556EA198F7E4000D935EF /* main.m */; };
@@ -49,6 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B478426198FE8EA00BA0317 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		1B478427198FE8EA00BA0317 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		1B47842A198FE9D200BA0317 /* Yelp_Dataset_Challenge_Terms_round_4.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Yelp_Dataset_Challenge_Terms_round_4.pdf; path = data/Yelp_Dataset_Challenge_Terms_round_4.pdf; sourceTree = "<group>"; };
+		1B47842B198FE9D200BA0317 /* Dataset_Challenge_Academic_Dataset_Agreement.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Dataset_Challenge_Academic_Dataset_Agreement.pdf; path = data/Dataset_Challenge_Academic_Dataset_Agreement.pdf; sourceTree = "<group>"; };
+		1B47842E198FEDEE00BA0317 /* GMLDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLDAO.h; sourceTree = "<group>"; };
+		1B47842F198FEDEE00BA0317 /* GMLDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLDAO.m; sourceTree = "<group>"; };
 		1B6556DB198F7E4000D935EF /* YelpAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6556DE198F7E4000D935EF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1B6556E1198F7E4000D935EF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -126,6 +137,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B478425198FE8D400BA0317 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				1B47842A198FE9D200BA0317 /* Yelp_Dataset_Challenge_Terms_round_4.pdf */,
+				1B47842B198FE9D200BA0317 /* Dataset_Challenge_Academic_Dataset_Agreement.pdf */,
+				1B478426198FE8EA00BA0317 /* README.md */,
+				1B478427198FE8EA00BA0317 /* LICENSE */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
 		1B5A5C7C198FB6B700BA4646 /* JSON Parser */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +160,7 @@
 		1B6556D2198F7E4000D935EF = {
 			isa = PBXGroup;
 			children = (
+				1B478425198FE8D400BA0317 /* Documentation */,
 				1B6556E4198F7E4000D935EF /* YelpAnalyzer */,
 				1B655705198F7E4100D935EF /* YelpAnalyzerTests */,
 				1B6556DD198F7E4000D935EF /* Frameworks */,
@@ -223,6 +246,8 @@
 			children = (
 				1BB971D7198FB61200C91428 /* Entities */,
 				1B6556F6198F7E4100D935EF /* YelpAnalyzer.xcdatamodeld */,
+				1B47842E198FEDEE00BA0317 /* GMLDAO.h */,
+				1B47842F198FEDEE00BA0317 /* GMLDAO.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -230,36 +255,36 @@
 		1BB971D7198FB61200C91428 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				1BB97205198FB63900C91428 /* Vote.h */,
-				1BB97206198FB63900C91428 /* Vote.m */,
-				1BB97202198FB63900C91428 /* Categories.h */,
-				1BB97203198FB63900C91428 /* Categories.m */,
-				1BB971FF198FB63900C91428 /* User.h */,
-				1BB97200198FB63900C91428 /* User.m */,
-				1BB971FC198FB63900C91428 /* ComplimentType.h */,
-				1BB971FD198FB63900C91428 /* ComplimentType.m */,
-				1BB971F9198FB63900C91428 /* CheckIn.h */,
-				1BB971FA198FB63900C91428 /* CheckIn.m */,
 				1BB971F6198FB63900C91428 /* Attributes.h */,
 				1BB971F7198FB63900C91428 /* Attributes.m */,
-				1BB971F3198FB63900C91428 /* Neighborhoods.h */,
-				1BB971F4198FB63900C91428 /* Neighborhoods.m */,
-				1BB971F0198FB63900C91428 /* TempFriends.h */,
-				1BB971F1198FB63900C91428 /* TempFriends.m */,
-				1BB971ED198FB63900C91428 /* Tip.h */,
-				1BB971EE198FB63900C91428 /* Tip.m */,
-				1BB971EA198FB63900C91428 /* Elite.h */,
-				1BB971EB198FB63900C91428 /* Elite.m */,
-				1BB971E7198FB63800C91428 /* Compliment.h */,
-				1BB971E8198FB63800C91428 /* Compliment.m */,
 				1BB971E4198FB63800C91428 /* Business.h */,
 				1BB971E5198FB63800C91428 /* Business.m */,
-				1BB971E1198FB63800C91428 /* ReviewVote.h */,
-				1BB971E2198FB63800C91428 /* ReviewVote.m */,
+				1BB97202198FB63900C91428 /* Categories.h */,
+				1BB97203198FB63900C91428 /* Categories.m */,
+				1BB971F9198FB63900C91428 /* CheckIn.h */,
+				1BB971FA198FB63900C91428 /* CheckIn.m */,
+				1BB971E7198FB63800C91428 /* Compliment.h */,
+				1BB971E8198FB63800C91428 /* Compliment.m */,
+				1BB971FC198FB63900C91428 /* ComplimentType.h */,
+				1BB971FD198FB63900C91428 /* ComplimentType.m */,
+				1BB971EA198FB63900C91428 /* Elite.h */,
+				1BB971EB198FB63900C91428 /* Elite.m */,
+				1BB971F3198FB63900C91428 /* Neighborhoods.h */,
+				1BB971F4198FB63900C91428 /* Neighborhoods.m */,
 				1BB971DE198FB63800C91428 /* OpenHours.h */,
 				1BB971DF198FB63800C91428 /* OpenHours.m */,
 				1BB971DB198FB63800C91428 /* Review.h */,
 				1BB971DC198FB63800C91428 /* Review.m */,
+				1BB971E1198FB63800C91428 /* ReviewVote.h */,
+				1BB971E2198FB63800C91428 /* ReviewVote.m */,
+				1BB971F0198FB63900C91428 /* TempFriends.h */,
+				1BB971F1198FB63900C91428 /* TempFriends.m */,
+				1BB971ED198FB63900C91428 /* Tip.h */,
+				1BB971EE198FB63900C91428 /* Tip.m */,
+				1BB971FF198FB63900C91428 /* User.h */,
+				1BB97200198FB63900C91428 /* User.m */,
+				1BB97205198FB63900C91428 /* Vote.h */,
+				1BB97206198FB63900C91428 /* Vote.m */,
 				1BB971D8198FB63800C91428 /* VoteType.h */,
 				1BB971D9198FB63800C91428 /* VoteType.m */,
 			);
@@ -343,9 +368,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B478429198FE8EA00BA0317 /* LICENSE in Resources */,
 				1B6556E9198F7E4000D935EF /* InfoPlist.strings in Resources */,
+				1B47842D198FE9D200BA0317 /* Dataset_Challenge_Academic_Dataset_Agreement.pdf in Resources */,
 				1B6556FA198F7E4100D935EF /* Images.xcassets in Resources */,
+				1B478428198FE8EA00BA0317 /* README.md in Resources */,
 				1B6556EF198F7E4000D935EF /* Credits.rtf in Resources */,
+				1B47842C198FE9D200BA0317 /* Yelp_Dataset_Challenge_Terms_round_4.pdf in Resources */,
 				1B6556F5198F7E4100D935EF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +397,7 @@
 				1BB971F2198FB63900C91428 /* TempFriends.m in Sources */,
 				1BB971E6198FB63800C91428 /* Business.m in Sources */,
 				1BB97201198FB63900C91428 /* User.m in Sources */,
+				1B478430198FEDEE00BA0317 /* GMLDAO.m in Sources */,
 				1BB971E0198FB63800C91428 /* OpenHours.m in Sources */,
 				1BB971EC198FB63900C91428 /* Elite.m in Sources */,
 				1B6556F8198F7E4100D935EF /* YelpAnalyzer.xcdatamodeld in Sources */,

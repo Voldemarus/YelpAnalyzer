@@ -69,4 +69,10 @@
 - (void)addReviews:(NSSet *)values;
 - (void)removeReviews:(NSSet *)values;
 
+
++ (Business *) createBusinessFromDictionary:(NSDictionary *)aDict inMoc:(NSManagedObjectContext *)moc;
+
+// Search for a Business record via it's ID
++ (Business *) getBusinessForId:(NSString *) cryptoId inMoc:(NSManagedObjectContext *) moc;
+
 @end

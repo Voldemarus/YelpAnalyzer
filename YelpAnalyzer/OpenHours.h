@@ -26,4 +26,8 @@
 - (void)addBusinesses:(NSSet *)values;
 - (void)removeBusinesses:(NSSet *)values;
 
+
++ (void) setUpHours:(NSDictionary *)hours forBusiness:(Business *)bus inMoc:(NSManagedObjectContext *)moc;
+
+
 @end

@@ -25,4 +25,9 @@
 - (void)addBusinesses:(NSSet *)values;
 - (void)removeBusinesses:(NSSet *)values;
 
+
+// Update/create new record. Used when Business Entity is filled
++ (void) setValue:(NSString *)aVal forAttribute:(NSString *)attrName andBusiness:(Business *)aBus
+			inMoc:(NSManagedObjectContext *)moc;
+
 @end

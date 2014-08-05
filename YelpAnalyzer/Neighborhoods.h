@@ -24,4 +24,7 @@
 - (void)addBusinesses:(NSSet *)values;
 - (void)removeBusinesses:(NSSet *)values;
 
+
++ (Neighborhoods *) getNeiborhoodForName:(NSString *)aString inMoc:(NSManagedObjectContext *) moc;
+
 @end

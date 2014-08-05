@@ -52,6 +52,7 @@
 		char *currentFile;
 		currentFile = malloc(2000);
 		BOOL converted = [fullPath getCString:currentFile maxLength:2000 encoding:NSUTF8StringEncoding];
+		free(currentFile);
 		if (!converted) {
 			NSAlert *alert = [NSAlert alertWithMessageText:@"Cannot convert NSString to String" defaultButton:@"Very sad..." alternateButton:nil otherButton:nil informativeTextWithFormat:@"Cannot convert NSString %@ to C-ctring",fullPath];
 			[alert runModal];
@@ -103,7 +104,6 @@
 			lineCount++;
 		}
 		NSLog(@"lines for %@ : %ld", fileName, lineCount);
-		
 		fclose(file);
 	} else {
 		NSAlert *alert = [NSAlert alertWithMessageText:@"File Not Found!" defaultButton:@"I see :-(" alternateButton:nil otherButton:nil informativeTextWithFormat:@"Cennot find file %@",fileName];
@@ -114,6 +114,7 @@
 
 - (void) parseSourceFiles
 {
+	// Data should be parsed in the defined sequence to provide link resolution
 	NSArray *list = @[[[Business class] description],
 						   [[User class] description],
 						   [[Tip class] description] ,
