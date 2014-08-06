@@ -15,7 +15,7 @@
 @dynamic close;
 @dynamic day;
 @dynamic open;
-@dynamic businesses;
+@dynamic busines;
 
 
 + (NSDate *) dateFromHourAndMinutes:(NSString *)aStr
@@ -27,9 +27,23 @@
 	return [df dateFromString:aStr];
 }
 
++ (NSString *) stringFromDate:(NSDate *)aDate
+{
+	static NSDateFormatter *rdf;
+	if (!rdf) {
+		rdf = [[NSDateFormatter alloc] initWithDateFormat:@"HH:mm" allowNaturalLanguage:NO];
+	}
+	return [rdf stringFromDate:aDate];
+	
+}
++ (NSArray *) dNames
+{
+	return @[@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"];
+}
+
 + (void) setUpHours:(NSDictionary *)hours forBusiness:(Business *)bus  inMoc:(NSManagedObjectContext *)moc
 {
-	NSArray *dayNames = @[@"Sunday", @"Monday", @"Tuesday", @"Wednesday", @"Thursday", @"Friday", @"Saturday"];
+	NSArray *dayNames = [OpenHours dNames];
 	for (NSInteger dayNum = 0; dayNum < [dayNames count]; dayNum++) {
 		NSString *dName = [dayNames objectAtIndex:dayNum];
 		NSDictionary *hoursForDay = [hours objectForKey:dName];
@@ -38,7 +52,7 @@
 			NSString *openHour = [hoursForDay objectForKey:@"open"];
 			NSString *closeHour = [hoursForDay objectForKey:@"close"];
 			NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[[self class] description]];
-			NSPredicate *pred = [NSPredicate predicateWithFormat:@"day = %d AND %@ in businesses", dayNum, bus];
+			NSPredicate *pred = [NSPredicate predicateWithFormat:@"day = %d AND busines = %@", dayNum, bus];
 			[req setPredicate:pred];
 			NSError *error = nil;
 			NSArray *result = [moc executeFetchRequest:req error:&error];
@@ -52,12 +66,19 @@
 			} else {
 				ohRec = [NSEntityDescription insertNewObjectForEntityForName:[[self class] description] inManagedObjectContext:moc];
 				ohRec.day = @(dayNum);
-				[ohRec addBusinessesObject:bus];
+				ohRec.busines = bus;
 			}
 			ohRec.open = [OpenHours dateFromHourAndMinutes:openHour];
 			ohRec.close = [OpenHours dateFromHourAndMinutes:closeHour];
 		}
 	}
+}
+
+- (NSString *) description
+{
+	return [NSString stringWithFormat:@"OpenHours: %@  (%@) %@ -- %@", self.busines.name,
+			[[OpenHours dNames] objectAtIndex:[self.day integerValue]], [OpenHours stringFromDate:self.open],
+			[OpenHours stringFromDate:self.close]];
 }
 
 @end

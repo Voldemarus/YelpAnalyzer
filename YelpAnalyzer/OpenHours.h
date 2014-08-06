@@ -16,15 +16,7 @@
 @property (nonatomic, retain) NSDate * close;
 @property (nonatomic, retain) NSNumber * day;
 @property (nonatomic, retain) NSDate * open;
-@property (nonatomic, retain) NSSet *businesses;
-@end
-
-@interface OpenHours (CoreDataGeneratedAccessors)
-
-- (void)addBusinessesObject:(Business *)value;
-- (void)removeBusinessesObject:(Business *)value;
-- (void)addBusinesses:(NSSet *)values;
-- (void)removeBusinesses:(NSSet *)values;
+@property (nonatomic, retain) Business *busines;
 
 
 + (void) setUpHours:(NSDictionary *)hours forBusiness:(Business *)bus inMoc:(NSManagedObjectContext *)moc;

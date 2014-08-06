@@ -12,6 +12,7 @@
 		1B47842C198FE9D200BA0317 /* Yelp_Dataset_Challenge_Terms_round_4.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B47842A198FE9D200BA0317 /* Yelp_Dataset_Challenge_Terms_round_4.pdf */; };
 		1B47842D198FE9D200BA0317 /* Dataset_Challenge_Academic_Dataset_Agreement.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1B47842B198FE9D200BA0317 /* Dataset_Challenge_Academic_Dataset_Agreement.pdf */; };
 		1B478430198FEDEE00BA0317 /* GMLDAO.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B47842F198FEDEE00BA0317 /* GMLDAO.m */; };
+		1B4784361990A9DA00BA0317 /* Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B4784351990A9DA00BA0317 /* Attributes.m */; };
 		1B6556DF198F7E4000D935EF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6556DE198F7E4000D935EF /* Cocoa.framework */; };
 		1B6556E9198F7E4000D935EF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B6556E7198F7E4000D935EF /* InfoPlist.strings */; };
 		1B6556EB198F7E4000D935EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6556EA198F7E4000D935EF /* main.m */; };
@@ -35,7 +36,6 @@
 		1BB971EF198FB63900C91428 /* Tip.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971EE198FB63900C91428 /* Tip.m */; };
 		1BB971F2198FB63900C91428 /* TempFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971F1198FB63900C91428 /* TempFriends.m */; };
 		1BB971F5198FB63900C91428 /* Neighborhoods.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971F4198FB63900C91428 /* Neighborhoods.m */; };
-		1BB971F8198FB63900C91428 /* Attributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971F7198FB63900C91428 /* Attributes.m */; };
 		1BB971FB198FB63900C91428 /* CheckIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971FA198FB63900C91428 /* CheckIn.m */; };
 		1BB971FE198FB63900C91428 /* ComplimentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB971FD198FB63900C91428 /* ComplimentType.m */; };
 		1BB97201198FB63900C91428 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB97200198FB63900C91428 /* User.m */; };
@@ -60,6 +60,8 @@
 		1B47842B198FE9D200BA0317 /* Dataset_Challenge_Academic_Dataset_Agreement.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Dataset_Challenge_Academic_Dataset_Agreement.pdf; path = data/Dataset_Challenge_Academic_Dataset_Agreement.pdf; sourceTree = "<group>"; };
 		1B47842E198FEDEE00BA0317 /* GMLDAO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GMLDAO.h; sourceTree = "<group>"; };
 		1B47842F198FEDEE00BA0317 /* GMLDAO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GMLDAO.m; sourceTree = "<group>"; };
+		1B4784341990A9DA00BA0317 /* Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attributes.h; sourceTree = "<group>"; };
+		1B4784351990A9DA00BA0317 /* Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attributes.m; sourceTree = "<group>"; };
 		1B6556DB198F7E4000D935EF /* YelpAnalyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpAnalyzer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B6556DE198F7E4000D935EF /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		1B6556E1198F7E4000D935EF /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -102,8 +104,6 @@
 		1BB971F1198FB63900C91428 /* TempFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempFriends.m; sourceTree = "<group>"; };
 		1BB971F3198FB63900C91428 /* Neighborhoods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Neighborhoods.h; sourceTree = "<group>"; };
 		1BB971F4198FB63900C91428 /* Neighborhoods.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Neighborhoods.m; sourceTree = "<group>"; };
-		1BB971F6198FB63900C91428 /* Attributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attributes.h; sourceTree = "<group>"; };
-		1BB971F7198FB63900C91428 /* Attributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attributes.m; sourceTree = "<group>"; };
 		1BB971F9198FB63900C91428 /* CheckIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckIn.h; sourceTree = "<group>"; };
 		1BB971FA198FB63900C91428 /* CheckIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckIn.m; sourceTree = "<group>"; };
 		1BB971FC198FB63900C91428 /* ComplimentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplimentType.h; sourceTree = "<group>"; };
@@ -244,8 +244,8 @@
 		1BB971AC198FB1AC00C91428 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
-				1BB971D7198FB61200C91428 /* Entities */,
 				1B6556F6198F7E4100D935EF /* YelpAnalyzer.xcdatamodeld */,
+				1BB971D7198FB61200C91428 /* Entities */,
 				1B47842E198FEDEE00BA0317 /* GMLDAO.h */,
 				1B47842F198FEDEE00BA0317 /* GMLDAO.m */,
 			);
@@ -255,8 +255,8 @@
 		1BB971D7198FB61200C91428 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				1BB971F6198FB63900C91428 /* Attributes.h */,
-				1BB971F7198FB63900C91428 /* Attributes.m */,
+				1B4784341990A9DA00BA0317 /* Attributes.h */,
+				1B4784351990A9DA00BA0317 /* Attributes.m */,
 				1BB971E4198FB63800C91428 /* Business.h */,
 				1BB971E5198FB63800C91428 /* Business.m */,
 				1BB97202198FB63900C91428 /* Categories.h */,
@@ -404,8 +404,8 @@
 				1BB971AB198FB14200C91428 /* GMLJsonDao.m in Sources */,
 				1BB971DA198FB63800C91428 /* VoteType.m in Sources */,
 				1B6556EB198F7E4000D935EF /* main.m in Sources */,
+				1B4784361990A9DA00BA0317 /* Attributes.m in Sources */,
 				1BB971FE198FB63900C91428 /* ComplimentType.m in Sources */,
-				1BB971F8198FB63900C91428 /* Attributes.m in Sources */,
 				1BB971FB198FB63900C91428 /* CheckIn.m in Sources */,
 				1B6556F2198F7E4000D935EF /* GMLAppDelegate.m in Sources */,
 				1BB971E9198FB63800C91428 /* Compliment.m in Sources */,

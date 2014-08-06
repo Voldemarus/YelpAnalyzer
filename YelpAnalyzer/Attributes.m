@@ -2,10 +2,11 @@
 //  Attributes.m
 //  YelpAnalyzer
 //
-//  Created by Водолазкий В.В. on 04.08.14.
+//  Created by Водолазкий В.В. on 05.08.14.
 //  Copyright (c) 2014 Geomatix Labs S.R.O. All rights reserved.
 //
 
+#import "Attributes.h"
 #import "Attributes.h"
 #import "Business.h"
 
@@ -14,16 +15,18 @@
 
 @dynamic name;
 @dynamic value;
-@dynamic businesses;
-
+@dynamic dataType;
+@dynamic business;
+@dynamic parent;
+@dynamic children;
 
 // Update/create new record. Used when Business Entity is filled
-+ (void) setValue:(NSString *)aVal forAttribute:(NSString *)attrName andBusiness:(Business *)aBus
++ (void) setValue:(id)aVal forAttribute:(NSString *)attrName andBusiness:(Business *)aBus
 			inMoc:(NSManagedObjectContext *)moc
 {
 	NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[self className]];
 	// We suppose that all Upper/lowercase issues has been resolved before, when dataset was created
-	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@ AND value = ",attrName, aVal];
+	NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name = %@ AND business = %@",attrName, aBus];
 	[req setPredicate:predicate];
 	
 	NSError *error = nil;
@@ -32,18 +35,23 @@
 		NSLog(@"%@ : error (104) = %@", [self className], [error localizedDescription]);
 		return;
 	}
+	Attributes *newRec;
 	if ([result count] == 0) {
-		Attributes *newRec = [NSEntityDescription insertNewObjectForEntityForName:[[self class] description] inManagedObjectContext:moc];
+		newRec = [NSEntityDescription insertNewObjectForEntityForName:[[self class] description] inManagedObjectContext:moc];
 		if (newRec) {
 			newRec.name = attrName;
-			newRec.value = aVal;
-			[newRec addBusinessesObject:aBus];
+			newRec.business = aBus;
 		}
 	} else {
-		Attributes *oldRec = (Attributes *)[result objectAtIndex:0];
-		[oldRec addBusinessesObject:aBus];
+		newRec = (Attributes *)[result objectAtIndex:0];
 	}
 }
+
+- (NSString *) description
+{
+	return [NSString stringWithFormat:@"Attributes:  %@ -> %@  (%@)",self.name, self.value, self.dataType];
+}
+
 
 
 @end

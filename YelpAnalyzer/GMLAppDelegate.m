@@ -18,6 +18,7 @@
 {
 	// Insert code here to initialize your application
 	jDao = [[GMLJsonDao alloc] init];
+	self.dao = [[GMLDAO alloc] init];
 	
 	[jDao parseSourceFiles];
 	

@@ -53,7 +53,7 @@
 		bus.longitude = @([[aDict objectForKey:@"longitude"] doubleValue]);
 		bus.starsRaring = @([[aDict objectForKey:@"stars"] doubleValue]);
 		bus.reviewCount = @([[aDict objectForKey:@"review_count"] integerValue]);
-		bus.isOpen =  [NSNumber numberWithBool:[[aDict objectForKey:@"open"] isEqualToString:@"True"]];
+		bus.isOpen =  [aDict objectForKey:@"open"];
 		//
 		// Now we'll set links to reference dictionaries
 		//
@@ -63,6 +63,7 @@
 				Neighborhoods *n  = [Neighborhoods getNeiborhoodForName:nei inMoc:moc];
 				if (n) {
 					[bus addNeighborhoodsObject:n];		// link is set up automatically
+					NSLog(@"%@",n);
 				}
 			}
 		}
@@ -72,6 +73,7 @@
 				Categories *cc = [Categories getCategoryByName:cat inMoc:moc];
 				if (cc) {
 					[bus addCategoriesObject:cc];
+					NSLog(@"%@",cc);
 				}
 			}
 		}
@@ -83,6 +85,7 @@
 			 }
 		}
 		[OpenHours setUpHours:[aDict objectForKey:@"hours"] forBusiness:bus inMoc:moc];
+		NSLog(@"%@",bus.openHours);
 		
 	}
 	return bus;

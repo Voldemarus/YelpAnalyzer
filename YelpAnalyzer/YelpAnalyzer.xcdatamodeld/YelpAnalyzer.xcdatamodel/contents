@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Attributes" representedClassName="Attributes" syncable="YES">
+        <attribute name="dataType" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="value" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="businesses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Business" inverseName="attributes" inverseEntity="Business" syncable="YES"/>
+        <attribute name="value" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="business" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="attributes" inverseEntity="Business" syncable="YES"/>
+        <relationship name="children" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attributes" inverseName="parent" inverseEntity="Attributes" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Attributes" inverseName="children" inverseEntity="Attributes" syncable="YES"/>
     </entity>
     <entity name="Business" representedClassName="Business" syncable="YES">
         <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
@@ -16,11 +19,11 @@
         <attribute name="reviewCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="starsRaring" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attributes" inverseName="businesses" inverseEntity="Attributes" syncable="YES"/>
+        <relationship name="attributes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Attributes" inverseName="business" inverseEntity="Attributes" syncable="YES"/>
         <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Categories" inverseName="businesses" inverseEntity="Categories" syncable="YES"/>
         <relationship name="checkIns" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CheckIn" inverseName="business" inverseEntity="CheckIn" syncable="YES"/>
         <relationship name="neighborhoods" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Neighborhoods" inverseName="businesses" inverseEntity="Neighborhoods" syncable="YES"/>
-        <relationship name="openHours" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OpenHours" inverseName="businesses" inverseEntity="OpenHours" syncable="YES"/>
+        <relationship name="openHours" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="OpenHours" inverseName="busines" inverseEntity="OpenHours" syncable="YES"/>
         <relationship name="reviews" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Review" inverseName="business" inverseEntity="Review" syncable="YES"/>
         <relationship name="tips" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tip" inverseName="business" inverseEntity="Tip" syncable="YES"/>
     </entity>
@@ -55,7 +58,7 @@
         <attribute name="close" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="open" optional="YES" attributeType="Date" syncable="YES"/>
-        <relationship name="businesses" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Business" inverseName="openHours" inverseEntity="Business" syncable="YES"/>
+        <relationship name="busines" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Business" inverseName="openHours" inverseEntity="Business" syncable="YES"/>
     </entity>
     <entity name="Review" representedClassName="Review" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
@@ -109,7 +112,7 @@
         <relationship name="reviewCounts" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ReviewVote" inverseName="voteType" inverseEntity="ReviewVote" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Attributes" positionX="-11" positionY="45" width="128" height="88"/>
+        <element name="Attributes" positionX="-11" positionY="45" width="128" height="135"/>
         <element name="Business" positionX="286" positionY="-49" width="128" height="298"/>
         <element name="Categories" positionX="547" positionY="71" width="128" height="73"/>
         <element name="CheckIn" positionX="97" positionY="-49" width="128" height="103"/>
@@ -117,13 +120,13 @@
         <element name="ComplimentType" positionX="232" positionY="263" width="128" height="88"/>
         <element name="Elite" positionX="-128" positionY="278" width="128" height="73"/>
         <element name="Neighborhoods" positionX="549" positionY="161" width="128" height="73"/>
-        <element name="OpenHours" positionX="486" positionY="-45" width="128" height="103"/>
+        <element name="OpenHours" positionX="486" positionY="-45" width="128" height="105"/>
+        <element name="Review" positionX="99" positionY="297" width="128" height="133"/>
+        <element name="ReviewVote" positionX="108" positionY="306" width="128" height="88"/>
         <element name="TempFriends" positionX="-153" positionY="405" width="128" height="73"/>
+        <element name="Tip" positionX="394" positionY="278" width="128" height="118"/>
         <element name="User" positionX="61" positionY="261" width="128" height="253"/>
         <element name="Vote" positionX="-117" positionY="522" width="128" height="88"/>
         <element name="VoteType" positionX="232" positionY="567" width="128" height="103"/>
-        <element name="Tip" positionX="394" positionY="278" width="128" height="118"/>
-        <element name="Review" positionX="99" positionY="297" width="128" height="133"/>
-        <element name="ReviewVote" positionX="108" positionY="306" width="128" height="88"/>
     </elements>
 </model>

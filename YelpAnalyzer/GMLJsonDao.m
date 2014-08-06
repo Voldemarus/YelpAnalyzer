@@ -122,7 +122,7 @@
 						   [[Review class] description]];
 	
 	for (NSInteger i=0; i < [list count]; i++) {
-		NSString *fName = [list objectAtIndex:i];
+		NSString *fName = [[self filesList] objectForKey:[list objectAtIndex:i]];
 		[self parseFile:fName];
 	}
 }
@@ -136,7 +136,8 @@
 
 - (void) processBusinessEntry:(NSDictionary *) data
 {
-	
+	GMLDAO *dao = [GMLDAO sharedInstance];
+	[dao createBusinessEntryFromDictionary:data];
 }
 
 - (void) processUserEntry:(NSDictionary *) data

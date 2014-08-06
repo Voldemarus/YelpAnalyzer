@@ -38,4 +38,9 @@
 	return (Neighborhoods *)[result objectAtIndex:0];
 }
 
+- (NSString *) description
+{
+	return [NSString stringWithFormat:@"%@ : %@", [self class], self.name];
+}
+
 @end
